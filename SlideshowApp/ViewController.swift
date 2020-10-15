@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startstopdisplay: UIButton!
     
     
-    var num = 1
+        var imagename: [String]  = ["猫1", "猫2", "猫3"]
     
     // タイマー
     var timer: Timer!
@@ -23,40 +23,34 @@ class ViewController: UIViewController {
     // タイマー用の時間のための変数
     var timer_sec: Float = 0
 
-    // バンドルした画像ファイルを読み込み
-    let image1 = UIImage(named: "cat-649164_640.jpg")
-    let image2 = UIImage(named: "cat-3535404_640.jpg")
-    let image3 = UIImage(named: "cat-4189697_640.jpg")
 
     override func viewDidLoad() {
 
         // Image Viewに画像を設定
-               imageView.image = image1
+               imageView.image = UIImage(named: "1.jpg")
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
-    
+
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+
+   
     @IBAction func NextBotton(_ sender: Any) {
-        switch num {
-        case 1 :
+        
+        while num < 3 {
+            num += 1
+            imageView.image = UIImage(named: "\(imagename[num]).jpg")
+        }
+        for num in imagenum {
             // Image Viewに画像を設定
-            imageView.image = image2
-            num = 2
-        case 2 :
-            // Image Viewに画像を設定
-            imageView.image = image3
-            num = 3
-        case 3 :
-            // Image Viewに画像を設定
-            imageView.image = image1
-            num = 1
-        default:
-            break // do nothing
+            imageView.image = UIImage(named: "\(num).jpg")
         }
         
     }
+    
+    
     @IBAction func BuckBotton(_ sender: Any) {
         switch num {
         case 1 :
@@ -79,7 +73,7 @@ class ViewController: UIViewController {
     
     
     // selector: #selector(updatetimer(_:)) で指定された関数
-    // timeInterval: 0.1, repeats: true で指定された通り、0.1秒毎に呼び出され続ける
+    // timeInterval: 0.1, repeats: true で指定された通り、1秒毎に呼び出され続ける
     @objc func updateTimer(_ timer: Timer) {
         self.timer_sec += 1
         self.timerLabel.text = String(format: "%.1f", self.timer_sec)
@@ -121,6 +115,16 @@ class ViewController: UIViewController {
             startstopdisplay.setTitle("再生", for: .normal)
 
         }
+    }
+    @IBAction func tapAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "toSlide", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のResultViewControllerを取得する
+        let slideViewController:SlideViewController = segue.destination as! SlideViewController
+        // 遷移先のResultViewControllerで宣言しているx, yに値を代入して渡す
+        slideViewController.x = num
     }
 
     

@@ -14,9 +14,9 @@
 		5AD682502531A94B00A30B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6824F2531A94B00A30B60 /* Assets.xcassets */; };
 		5AD682532531A94B00A30B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD682512531A94B00A30B60 /* LaunchScreen.storyboard */; };
 		5AD6825B2534991A00A30B60 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6825A2534991A00A30B60 /* SlideViewController.swift */; };
-		5AD6826725349DB700A30B60 /* cat-4189697_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826425349DB600A30B60 /* cat-4189697_640.jpg */; };
-		5AD6826825349DB700A30B60 /* cat-649164_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826525349DB600A30B60 /* cat-649164_640.jpg */; };
-		5AD6826925349DB700A30B60 /* cat-3535404_640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826625349DB700A30B60 /* cat-3535404_640.jpg */; };
+		5AD6826725349DB700A30B60 /* 猫3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826425349DB600A30B60 /* 猫3.jpg */; };
+		5AD6826825349DB700A30B60 /* 猫１.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826525349DB600A30B60 /* 猫１.jpg */; };
+		5AD6826925349DB700A30B60 /* 猫2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6826625349DB700A30B60 /* 猫2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		5AD682522531A94B00A30B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AD682542531A94B00A30B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD6825A2534991A00A30B60 /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
-		5AD6826425349DB600A30B60 /* cat-4189697_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat-4189697_640.jpg"; sourceTree = "<group>"; };
-		5AD6826525349DB600A30B60 /* cat-649164_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat-649164_640.jpg"; sourceTree = "<group>"; };
-		5AD6826625349DB700A30B60 /* cat-3535404_640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cat-3535404_640.jpg"; sourceTree = "<group>"; };
+		5AD6826425349DB600A30B60 /* 猫3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猫3.jpg"; sourceTree = "<group>"; };
+		5AD6826525349DB600A30B60 /* 猫１.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猫１.jpg"; sourceTree = "<group>"; };
+		5AD6826625349DB700A30B60 /* 猫2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "猫2.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 		5AD6825C25349BA700A30B60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5AD6826525349DB600A30B60 /* cat-649164_640.jpg */,
-				5AD6826625349DB700A30B60 /* cat-3535404_640.jpg */,
-				5AD6826425349DB600A30B60 /* cat-4189697_640.jpg */,
+				5AD6826525349DB600A30B60 /* 猫１.jpg */,
+				5AD6826625349DB700A30B60 /* 猫2.jpg */,
+				5AD6826425349DB600A30B60 /* 猫3.jpg */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -145,11 +145,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD6826725349DB700A30B60 /* cat-4189697_640.jpg in Resources */,
+				5AD6826725349DB700A30B60 /* 猫3.jpg in Resources */,
 				5AD682532531A94B00A30B60 /* LaunchScreen.storyboard in Resources */,
 				5AD682502531A94B00A30B60 /* Assets.xcassets in Resources */,
-				5AD6826825349DB700A30B60 /* cat-649164_640.jpg in Resources */,
-				5AD6826925349DB700A30B60 /* cat-3535404_640.jpg in Resources */,
+				5AD6826825349DB700A30B60 /* 猫１.jpg in Resources */,
+				5AD6826925349DB700A30B60 /* 猫2.jpg in Resources */,
 				5AD6824E2531A94800A30B60 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
