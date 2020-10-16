@@ -43,13 +43,6 @@
                                     <action selector="NextBotton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6m-dn-g3C"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te6-wb-39O">
-                                <rect key="frame" x="186" y="697" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -69,7 +62,6 @@
                     <connections>
                         <outlet property="imageView" destination="pOx-ED-H9g" id="kEq-gr-BSf"/>
                         <outlet property="startstopdisplay" destination="q0C-sC-998" id="DPa-l6-wdc"/>
-                        <outlet property="timerLabel" destination="te6-wb-39O" id="qZa-70-fLM"/>
                         <segue destination="bhH-0i-UgE" kind="presentation" identifier="toSlide" id="Ptk-dA-cDH"/>
                     </connections>
                 </viewController>
