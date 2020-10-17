@@ -60,7 +60,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buckbottonenable" destination="DMg-Aw-DDH" id="AMp-JC-e6Y"/>
                         <outlet property="imageView" destination="pOx-ED-H9g" id="kEq-gr-BSf"/>
+                        <outlet property="nextbottonenable" destination="8RP-4d-rsi" id="R7B-ba-K3h"/>
                         <outlet property="startstopdisplay" destination="q0C-sC-998" id="DPa-l6-wdc"/>
                         <segue destination="bhH-0i-UgE" kind="presentation" identifier="toSlide" id="Ptk-dA-cDH"/>
                     </connections>

@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var startstopdisplay: UIButton!
+    @IBOutlet weak var nextbottonenable: UIButton!
+    @IBOutlet weak var buckbottonenable: UIButton!
+    
+    
     
     
     var num = 0
@@ -19,10 +23,6 @@ class ViewController: UIViewController {
     // タイマー
     var timer: Timer!
     
-
-    
-    // ボタン無効化用の変数
-    var bottonon: String = "true"
     
     override func viewDidLoad() {
         
@@ -40,7 +40,6 @@ class ViewController: UIViewController {
     
     @IBAction func NextBotton(_ sender: Any) {
         
-        if self.bottonon == "true" {
             switch num {
             case 0...1 :
                 // Image Viewに画像を設定
@@ -53,13 +52,12 @@ class ViewController: UIViewController {
             default:
                 break // do nothing
             }
-        }
+        
         
     }
     
     
     @IBAction func BuckBotton(_ sender: Any) {
-        if self.bottonon == "true" {
             switch num {
             case 0 :
                 // Image Viewに画像を設定
@@ -72,7 +70,7 @@ class ViewController: UIViewController {
             default:
                 break // do nothing
             }
-        }
+        
     }
     
     
@@ -90,7 +88,8 @@ class ViewController: UIViewController {
             self.timer = nil          // startTimer() の self.timer == nil
             num = 0
             startstopdisplay.setTitle("再生", for: .normal)
-            bottonon = "true"
+            nextbottonenable.isEnabled = true
+            buckbottonenable.isEnabled = true
         }
     }
     
@@ -105,13 +104,15 @@ class ViewController: UIViewController {
         if self.timer == nil {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
             startstopdisplay.setTitle("停止", for: .normal)
-            bottonon = "false"
+            nextbottonenable.isEnabled = false
+            buckbottonenable.isEnabled = false
         }else {
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
             imageView.image = UIImage(named: "\(imagenum[0])")
             startstopdisplay.setTitle("再生", for: .normal)
-            bottonon = "true"
+            nextbottonenable.isEnabled = true
+            buckbottonenable.isEnabled = true
         }
     }
     @IBAction func tapAction(_ sender: Any) {
@@ -119,7 +120,8 @@ class ViewController: UIViewController {
             self.timer.invalidate()   // タイマーを停止する
             self.timer = nil          // startTimer() の self.timer == nil で判断するために、 self.timer = nil としておく
             startstopdisplay.setTitle("再生", for: .normal)
-            bottonon = "true"
+            nextbottonenable.isEnabled = true
+            buckbottonenable.isEnabled = true
         }
         
         self.performSegue(withIdentifier: "toSlide", sender: nil)
